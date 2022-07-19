@@ -46,6 +46,57 @@
         echo"<br>";
         echo $jourDeLaSemaine[$i];
     }
+    echo "<br>";
+    $obj = new stdClass();
+    var_dump($obj);
+
+
+    class Personne{
+        public $prenom;
+        public $nom;
+        public function __construct($prenom, $nom){
+            $this->prenom = $prenom;
+            $this->nom = $nom;
+        }
+
+        public function parler(){
+            echo  $this->prenom . "bla bla bla";
+            echo "<br>";
+            $this->_test();
+        }
+
+        private function _test(){
+            echo "Ceci est mon test privé.";
+            echo "<br>";
+        }
+    }
+       
+    class Stagiaire extends Personne {
+        public function __construct($prenom, $nom, $estTimide){
+            parent::__construct($prenom, $nom);
+            $this->estTimide = $estTimide;
+        }
+    }
+    public function sePresenter(){
+    if (!$this->estTimide) {
+        echo $this->prenom . " ". $this->nom ." "."se presenter.";
+    }else{
+        echo $this->prenom . " ". $this->nom ." "."ne se presente pas.";
+    }
+echo"<br>";
+    }
+    $toto = new Personne("Jean","Mart");
+    var_dump($toto);
+    $jessica = new Stagiaire("Jessica","JOSPEHINE",true);
+    $richard = new Stagiaire("richard","MALAC",false);
+
+
+    var_dump($jessica);
+    echo "<br>";
+    var_dump($richard);
+
+
+    // $jessica->test();
       ?>
 
 </body>
