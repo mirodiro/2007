@@ -37,6 +37,15 @@
       echo"<br>";
       $condition= 1<2;
       echo $condition;
+    //   tableau//
+    $jourDeLaSemaine = ["lundi","mardi","mercrdi","jeudi","vendredi","samedi"];
+    array_push($jourDeLaSemaine,"dimanche");
+    var_dump($jourDeLaSemaine);
+
+    for ($i=0; $i < count($jourDeLaSemaine) ; $i++) { 
+        echo"<br>";
+        echo $jourDeLaSemaine[$i];
+    }
       ?>
 
 </body>
