@@ -95,7 +95,11 @@ echo"<br>";
     echo "<br>";
     var_dump($richard);
 
+    $jessica->parler();
+    $jessica->sePresenter();
+    $richard->sePresenter();
 
+    
     // $jessica->test();
       ?>
 
